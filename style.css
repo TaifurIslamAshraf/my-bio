@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  padding: 10px;
+}
+
+.dotted-hr {
+  border: dotted 6px white;
+  border-bottom: none;
+  margin: 20px auto;
+  width: 70px;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+/* for mobile */
+[class*="col-"] {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #656675;
+  color: white;
+  text-align: center;
+}
+
+.navbar img {
+  height: 90px;
+  width: 80px;
+}
+
+.nav-hading h1 {
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu a {
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 5px 0px;
+  background-color: #34353b;
+  border-radius: 10px;
+}
+
+.navbar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile {
+  padding: 130px 5px;
+  text-align: center;
+  position: relative;
+}
+
+.profile .up {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 45px;
+  top: 25px;
+  transition: transform 1s;
+}
+
+.profile .up:hover {
+  transform: rotate(360deg);
+}
+
+.disc h1 {
+  padding: 10px 0px;
+  font-family: "Satisfy", cursive;
+}
+
+.disc p {
+  padding: 10px 0px;
+  color: #464544;
+}
+
+.profile .buttom {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 45px;
+  bottom: 20px;
+  transition: transform 1s;
+}
+
+.profile .buttom:hover {
+  transform: rotate(360deg);
+}
+
+/* about me */
+.about-me {
+  background-color: #39a4ac;
+  padding: 1% 0%;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.about-me::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.aboutme-image img {
+  border: 5px solid white;
+  border-radius: 50%;
+  height: 220px;
+  width: 220px;
+}
+
+.cv-button {
+  background-color: #052d2f;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/* professional experience start hear */
+
+.professional-experience {
+  padding: 3% 0%;
+}
+
+.professional-experience .card {
+  background-color: #829377;
+  border-radius: 5px;
+  padding: 10px;
+  height: 700px;
+  transition: 0.3s;
+  margin: 10px 0;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 5px black;
+}
+
+.card-icon {
+  text-align: center;
+}
+
+.card-icon img {
+  margin-top: 10px;
+  width: 80px;
+}
+
+.rounded-img {
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.card-title h2 {
+  background-color: #616161;
+  margin: 8px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+}
+
+.card-desc ol li {
+  padding: 8px 0;
+}
+
+/* card-2 */
+.card-2 {
+  background-color: #829377;
+  border-radius: 5px;
+  padding: 10px;
+  height: 700px;
+  transition: 0.3s;
+  margin: 10px 0;
+}
+
+.card-2:hover {
+  box-shadow: 0 4px 8px 5px black;
+}
+
+.card-icon .rounded-img-2 {
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* card-3 */
+
+.skill-container li {
+  list-style-type: none;
+  margin: 30px 10px;
+  font-weight: bold;
+  position: relative;
+}
+
+.skill-container li::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: rgb(86, 86, 153, 0.5);
+  width: 100%;
+  height: 10px;
+  border-radius: 1000px;
+}
+
+.skill-container li::after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: calc(100% + 5px);
+  background-color: #0f176d;
+  width: 0;
+  height: 10px;
+  border-radius: 1000px;
+
+  -webkit-animation-duration: 3s;
+
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.skill-container li.html::after {
+  -webkit-animation-name: html;
+  animation-name: html;
+}
+
+@-webkit-keyframes html {
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes html {
+  to {
+    width: 90%;
+  }
+}
+
+.skill-container li.css::after {
+  -webkit-animation-name: css;
+  animation-name: css;
+}
+
+@-webkit-keyframes css {
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes css {
+  to {
+    width: 75%;
+  }
+}
+
+.skill-container li.js::after {
+  -webkit-animation-name: js;
+  animation-name: js;
+}
+
+@-webkit-keyframes js {
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes js {
+  to {
+    width: 50%;
+  }
+}
+
+.skill-container li.react::after {
+  -webkit-animation-name: react;
+  animation-name: react;
+}
+
+@-webkit-keyframes react {
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes react {
+  to {
+    width: 80%;
+  }
+}
+
+.skill-container li.bootstrep::after {
+  -webkit-animation-name: bootstrep;
+  animation-name: bootstrep;
+}
+
+@-webkit-keyframes bootstrep {
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes bootstrep {
+  to {
+    width: 85%;
+  }
+}
+
+.professional-experience::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* professional experience start hear */
+
+/* Achievements start here */
+
+.achievements-contact {
+  color: white;
+  background-color: #39a4ac;
+  text-align: center;
+}
+
+.achievements li {
+  text-align: left;
+  padding: 5px 0px;
+}
+.contact-link {
+  margin-top: 20px;
+}
+
+.contact-me input,
+textarea {
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  resize: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+}
+
+.contact-me button {
+  background-color: #052d2f;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  padding: 7px;
+  width: 100px;
+  margin: 0 5px;
+  color: white;
+}
+.media-button .btn {
+  border: none;
+  font-size: 32px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 50%;
+  width: 50px;
+}
+
+.achievements-contact::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Achievements ends here */
+
+/* footer start here */
+
+.footer {
+  background-color: #25252c;
+  text-align: center;
+}
+.footer-menu a {
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1rem;
+}
+.footer-menu a:hover {
+  color: gray;
+}
+.footer-desc small {
+  color: white;
+}
+
+.footer::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/* footer end here */
